@@ -16,7 +16,7 @@ var Nav = React.createClass({
 
 var Title = React.createClass({
     render: function () {
-        return(
+        return (
             <div className="container">
                 <div className="row">
                     <h1>{this.props.title}</h1>
@@ -26,13 +26,39 @@ var Title = React.createClass({
     }
 });
 
+var Button = React.createClass({
+    getInitialState: function () {
+        return {
+            click: false
+        };
+    },
+    toggleClick: function () {
+        this.setState({
+            click: !this.state.click
+        })
+    },
+    render: function () {
+        var btnClass = this.state.click ? 'btn btn-warning' : 'btn btn-success';
+
+        var title = this.state.click ? this.props.textActive : this.props.title;
+
+        return (
+            <button onClick={this.toggleClick} className={btnClass}>{ title}</button>
+        );
+    }
+})
+
 ReactDOM.render(
     <Nav title="Props React" linkUrl="index.html" />,
     document.getElementById('nav')
 );
 
-
 ReactDOM.render(
     <Title title="Titulo novo"/>,
     document.getElementById('title')
+);
+
+ReactDOM.render(
+    <Button title="Meu botão"  textActive="Loading..."/>,
+    document.getElementById('button')
 );
