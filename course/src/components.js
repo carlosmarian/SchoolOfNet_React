@@ -83,4 +83,47 @@ var Form = React.createClass({
             </form>
         );
     }
-})
+});
+
+var Contact = React.createClass({
+    render: function () {
+        return (
+            <tr>
+                <th scope="row">{this.props.idNumber}</th>
+                <td>{this.props.name}</td>
+                <td>{this.props.email}</td>
+                <td>{this.props.subject}</td>
+                <td>{this.props.children}</td>
+            </tr>
+        );
+    }
+});
+
+var List = React.createClass({
+    render: function () {
+        var contactNodes = this.props.data.map(function (contact) {
+            return (
+                <Contact idNumber={contact.id} name={contact.name} email={contact.email} subject={contact.subject}>
+                    {contact.messenger}
+                </Contact>
+            );
+        });
+
+        return (
+            <table className="table">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>NameId</td>
+                        <td>E-mail</td>
+                        <td>Subject</td>
+                        <td>Messenger</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {contactNodes}
+                </tbody>
+            </table >
+        );
+    }
+});

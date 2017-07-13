@@ -1,3 +1,7 @@
+var data = [
+    { id: "1", name: "Maria", email: "etste@tstes", subject: "R", messenger: "Um teste maior react" },
+    { id: "2", name: "Pedro", email: "ee2@tstes", subject: "A", messenger: "Um teste maio angular" }
+];
 
 var Page = React.createClass(
     {
@@ -12,6 +16,10 @@ var Page = React.createClass(
                         <div className="row">
                             <Form />
                             <Button textActive="Loading..." >Send</Button>
+                        </div>
+                        <div className="row">
+                            <List data={data} />
+                            <br /><br />
                         </div>
                     </div>
                 </myElement>
