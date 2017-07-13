@@ -6,9 +6,10 @@ var Page = React.createClass(
                 <myElement>
                     <Nav title="Props React" linkUrl="index.html" />
                     <div className="container">
-                        <Title title="Titulo novo" />
+                        <Title title="My component Form" />
+                        <Form/>
                         <div className="row">
-                            <Button title="Meu botão" textActive="Loading..." />
+                            <Button title="Send" textActive="Loading..." />
                         </div>
                     </div>
                 </myElement>
