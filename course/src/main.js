@@ -7,7 +7,7 @@ var Page = React.createClass(
                     <Nav title="Props React" linkUrl="index.html" />
                     <div className="container">
                         <Title title="My component Form" />
-                        <Form/>
+                        <Form />
                         <div className="row">
                             <Button title="Send" textActive="Loading..." />
                         </div>
