@@ -11,7 +11,9 @@ Instalar o babel preset react
 npm install babel-preset-react --save-dev
 
 
-Configurar o babel.
-babel 
+Configurar o babel para ele monitorar e sempre gerar um novo js.
+babel --presets react [pasta origem] --watch --out-dir [pasta destino]
+Exemplo: 
+ babel --presets react src --watch --out-dir js
 
 

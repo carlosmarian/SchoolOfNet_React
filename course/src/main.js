@@ -33,6 +33,6 @@ ReactDOM.render(
 
 
 ReactDOM.render(
-    <Title title="Titulo teste"/>,
+    <Title title="Titulo novo"/>,
     document.getElementById('title')
 );
