@@ -4,7 +4,9 @@ var Nav = React.createClass({
             <nav className="navbar navbar-default">
                 <div className="container">
                     <div className="navbar-header">
-                        <a href="#" className="navbar-brand">React</a>
+                        <a href={this.props.linkUrl} className="navbar-brand">
+                            {this.props.title}
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -12,7 +14,25 @@ var Nav = React.createClass({
     }
 });
 
+var Title = React.createClass({
+    render: function () {
+        return(
+            <div className="container">
+                <div className="row">
+                    <h1>{this.props.title}</h1>
+                </div>
+            </div>
+        );
+    }
+});
+
 ReactDOM.render(
-    <Nav />,
-    document.getElementById('app')
+    <Nav title="Props React" linkUrl="index.html" />,
+    document.getElementById('nav')
+);
+
+
+ReactDOM.render(
+    <Title title="Titulo teste"/>,
+    document.getElementById('title')
 );
