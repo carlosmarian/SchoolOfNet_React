@@ -1,0 +1,8 @@
+{
+    "Name": "iniciando_react",
+    "vaersion": "1.0.0",
+    "title": "Iniciando com React",
+    "devDependencies": {
+        "babel-preset-react": "^6.24.1"
+    }
+}
